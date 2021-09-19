@@ -3,22 +3,26 @@ const cashAmount = document.querySelector("#cash-amt");
 const checkButton = document.querySelector("#check-btn");
 const message = document.querySelector("#error-msg");
 const noOfNotes = document.querySelectorAll(".no-of-notes");
+const tableShow = document.querySelector("#tableDiv")
 
 const availableNotes = [2000,500,100,20,10,5,1];
 
 checkButton.addEventListener("click", function validateBillAndCashAmt(){
     hideMessage();
-    if (billAmount.value > 0) {
-        if (cashAmount.value >= billAmount.value) {
+    if (Number(billAmount.value) > 0) {
+        if (Number(cashAmount.value) >= Number(billAmount.value)) {
            const amtToBeReturned =  cashAmount.value - billAmount.value;
            calculateChange(amtToBeReturned);
+           tableShow.style.display = "flex";
         }
         else {
             showMessage("The cash amount should be greater than or equal to the bill amount");
+            tableShow.style.display = "none";
         }
     }
     else {
         showMessage("invalid  bill amount");
+        tableShow.style.display = "none";
     }
 });
 

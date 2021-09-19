@@ -31,7 +31,6 @@ input {
 }
 
 #check-btn {
-    margin-top: 1rem;
     display: block;
     margin: auto;
     color: var(--primary-green);
@@ -41,6 +40,16 @@ input {
     border-radius: 0.3rem;
 }
 
+#tableDiv {
+    margin-top: 1rem;
+}
+
 #change-table {
     border-color: var(--primary-green);
 }
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 10px;
+  }
