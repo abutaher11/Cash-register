@@ -21,7 +21,7 @@ checkButton.addEventListener("click", function validateBillAndCashAmt(){
         }
     }
     else {
-        showMessage("invalid  bill amount");
+        showMessage("Please enter valid amounts");
         tableShow.style.display = "none";
     }
 });

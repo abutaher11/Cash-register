@@ -44,12 +44,14 @@ input {
     margin-top: 1rem;
 }
 
-#change-table {
-    border-color: var(--primary-green);
+.change-table {
+    flex-direction: column;
+    margin: auto;
+
 }
 
 table, th, td {
     border: 1px solid white;
     border-collapse: collapse;
-    padding: 10px;
+    padding: 8px;
   }
